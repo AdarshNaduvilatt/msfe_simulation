@@ -39,7 +39,7 @@ msfe-simulator/
 
 ```bash
 git clone https://github.com/AdarshNaduvilatt/msfe_simulation.git
-cd msfe-simulator
+cd msfe-simulation
 ```
 
 ## 2. Create a Conda environment
