@@ -36,7 +36,7 @@ dev = [
 ]
 
 [project.scripts]
-msfe-app = "msfe_simulator.cli:main"
+msfe-app = "msfe_simulator.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

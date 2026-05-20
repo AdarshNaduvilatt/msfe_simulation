@@ -35,11 +35,25 @@ msfe-simulator/
 
 ## Installation
 
-Clone the repository and install it in editable mode:
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/<your-username>/msfe-simulator.git
 cd msfe-simulator
+```
+
+## 2. Create a Conda environment
+
+```bash
+conda create -n msfe python=3.10 -y
+conda activate msfe
+```
+
+(You can use Python 3.10–3.12, but 3.11 is recommended.)
+
+## 3. Install the package
+
+```bash
 pip install -e .
 ```
 
