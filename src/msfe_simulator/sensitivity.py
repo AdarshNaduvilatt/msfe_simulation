@@ -4,8 +4,8 @@ from dataclasses import replace
 from typing import Any, Dict, List
 import numpy as np
 
-from .model import ModelParams, ModelSettings, simulate_msfe
-from .metrics import fft_peak_metrics, surface_metrics
+from model import ModelParams, ModelSettings, simulate_msfe
+from metrics import fft_peak_metrics, surface_metrics
 
 
 def run_with_metrics(params: ModelParams, settings: ModelSettings) -> Dict[str, Any]:

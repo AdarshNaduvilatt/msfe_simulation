@@ -1,13 +1,8 @@
-import streamlit.web.cli as stcli
-import sys
-from pathlib import Path
+def main():
+    import sys
+    from pathlib import Path
+    from streamlit.web import cli as stcli
 
-app = Path(__file__).parent / "app.py"
-
-sys.argv = [
-    "streamlit",
-    "run",
-    str(app),
-]
-
-stcli.main()
+    app_path = Path(__file__).parent / "app.py"
+    sys.argv = ["streamlit", "run", str(app_path)]
+    stcli.main()

@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.interpolate import griddata, RegularGridInterpolator
 
-from .model import ModelParams, ModelSettings, simulate_msfe
+from model import ModelParams, ModelSettings, simulate_msfe
 
 
 def parse_mahr_polar_txt(filepath: str | Path) -> Dict[str, object]:

@@ -8,10 +8,10 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
-from .model import ModelParams, ModelSettings, simulate_msfe
-from .metrics import fft_peak_metrics, component_peak_metrics, surface_metrics
-from .sensitivity import sweep_parameter
-from .plot_generation import fig_surface, fig_spectrum, fig_toolpath, fig_zs
+from model import ModelParams, ModelSettings, simulate_msfe
+from metrics import fft_peak_metrics, component_peak_metrics, surface_metrics
+from sensitivity import sweep_parameter
+from plot_generation import fig_surface, fig_spectrum, fig_toolpath, fig_zs
 
 
 st.set_page_config(page_title="MSFE Simulator", layout="wide")
