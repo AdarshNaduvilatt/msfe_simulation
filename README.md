@@ -10,12 +10,12 @@ Simulation tool for **mid-spatial-frequency error (MSFE)** patterns generated fr
 - Contact-footprint smoothing using either `r` and `h` or direct `sigma_xy`
 - 1D signal, FFT spectrum, and 2D surface generation
 - Streamlit UI for single simulations and one-factor-at-a-time sensitivity analysis
-- Validation utilities for measured Mahr polar profile text files
+- Validation utilities for measured polar profile text files
 
 ## Project structure
 
 ```text
-msfe-simulator/
+msfe-simulation/
 ├── pyproject.toml
 ├── README.md
 ├── LICENSE
@@ -49,8 +49,6 @@ conda create -n msfe python=3.10 -y
 conda activate msfe
 ```
 
-(You can use Python 3.10–3.12, but 3.11 is recommended.)
-
 ## 3. Install the package
 
 ```bash
@@ -74,36 +72,6 @@ Alternative local command:
 streamlit run streamlit_app.py
 ```
 
-## Minimal Python usage
-
-```python
-from msfe_simulator import ModelParams, ModelSettings, simulate_msfe
-
-params = ModelParams(
-    R_mm=31.0,
-    v_mm_per_min=5000.0,
-    n_rpm=1912.0,
-    peak_type="gaussian",
-    FWHMrel=0.20,
-    alpha=0.0,
-    a=0.8,
-    b=1.2,
-    z_rms_um=0.12,
-    r_mm=100.0,
-    h_um=10.0,
-    random_seed=42,
-)
-
-settings = ModelSettings(
-    spiral_step_mm=0.05,
-    Nf=300,
-    m_trunc=3.0,
-    grid_pitch_mm=0.05,
-)
-
-result = simulate_msfe(params, settings)
-print(result["meta"])
-```
 
 ## Main parameters
 
