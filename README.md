@@ -45,17 +45,6 @@ pip install -e .
 
 This installs the package and all required dependencies from `pyproject.toml`.
 
-For development tools as well:
-
-```bash
-pip install -e ".[dev]"
-```
-
-If the command above gives a shell error, use:
-
-```bash
-pip install -e ".[dev]"
-```
 
 ## Run the Streamlit app
 
@@ -118,38 +107,3 @@ print(result["meta"])
 | `Nf` | Number of sampled frequency components |
 | `m_trunc` | Frequency truncation range in multiples of sigma |
 | `grid_pitch_mm` | 2D surface grid spacing |
-
-## Validation workflow
-
-The `validation.py` module contains utilities to parse measured polar-profile text files, reconstruct a measured surface, extract circular-profile spectra, and compare measured and simulated dominant spectral peaks.
-
-Expected measured file naming pattern by default:
-
-```text
-emmav_3d_pol_*.txt
-```
-
-To run the validation script from a folder containing these files:
-
-```bash
-python -m msfe_simulator.validation
-```
-
-The script writes `validation_summary.csv` and displays a measured-vs-simulated spectrum overlay.
-
-## Notes for GitHub upload
-
-Recommended first commit:
-
-```bash
-git init
-git add .
-git commit -m "Initial MSFE simulator package"
-git branch -M main
-git remote add origin https://github.com/<your-username>/msfe-simulator.git
-git push -u origin main
-```
-
-## License
-
-This project is released under the MIT License. Change `LICENSE` if your university or supervisor requires a different license.
