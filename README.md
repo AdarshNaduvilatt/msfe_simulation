@@ -38,7 +38,7 @@ msfe-simulator/
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/AdarshNaduvilatt/mfse_simulation.git
+git clone https://github.com/AdarshNaduvilatt/msfe_simulation.git
 cd msfe-simulator
 ```
 
